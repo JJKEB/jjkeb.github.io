@@ -34,7 +34,7 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Create React App 에서 Scoped 사용하기-</title>
+    <title>Create React App 에서 Scoped 사용하기-KUMA Blog</title>
 
     <link rel="canonical" href="/create-react-app-scoped/">
 
@@ -196,30 +196,30 @@
 </blockquote>
 <h3 id="react-app-환경구성">React App 환경구성</h3>
 <p>create-react-app 프로젝트 폴더를 생성하고 생성된 폴더로 이동합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npx create-react-app 폴더명
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npx create-react-app 폴더명
 
-cd 폴더명
+<span style="color:#8be9fd;font-style:italic">cd</span> 폴더명
 </code></pre></div><h3 id="추가-패키지-설치">추가 패키지 설치</h3>
 <p><a href="https://github.com/gsoft-inc/craco/blob/master/packages/craco/README.md#installation" target="_blank" rel="nofollow">craco</a>
  와 <a href="https://www.npmjs.com/package/craco-plugin-scoped-css" target="_blank" rel="nofollow">craco-plugin-scoped-css</a>
  패키지 두개를 설치합니다.</p>
 <p>※ craco 는 CRA 환경에 webpack 이나 다른 config 파일을 수정이 힘들기에.. ( <del>npm eject 해야&hellip;</del> ) eslint, babel, postcss 등의 패키지의 설정을 eject 하지않고 커스텀 할수있도록 해주는 패키지라 합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i @craco/craco
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i @craco/craco
 npm i -D craco-plugin-scoped-css
 </code></pre></div><h3 id="packagejson-설정">package.json 설정</h3>
 <p>루트에 있는 package.json 파일의 scripts 이부분을 craco 실행으로 변경합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
-  <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;craco start&#34;</span>,
-  <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;craco build&#34;</span>,
-  <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;craco test&#34;</span>,
-  <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#f1fa8c">&#34;scripts&#34;</span>: {
+  <span style="color:#ff79c6">&#34;start&#34;</span>: <span style="color:#f1fa8c">&#34;craco start&#34;</span>,
+  <span style="color:#ff79c6">&#34;build&#34;</span>: <span style="color:#f1fa8c">&#34;craco build&#34;</span>,
+  <span style="color:#ff79c6">&#34;test&#34;</span>: <span style="color:#f1fa8c">&#34;craco test&#34;</span>,
+  <span style="color:#ff79c6">&#34;eject&#34;</span>: <span style="color:#f1fa8c">&#34;react-scripts eject&#34;</span>
 }
 </code></pre></div><h3 id="cracoconfigjs-생성">craco.config.js 생성</h3>
 <p>루트에 <strong>craco.config.js</strong> 파일을 생성하고 아래 내용을 입력한후 저장합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">module.exports <span style="color:#ff79c6">=</span> {
+  plugins<span style="color:#ff79c6">:</span> [
     {
-      <span style="color:#a6e22e">plugin</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;craco-plugin-scoped-css&#39;</span>),
+      plugin<span style="color:#ff79c6">:</span> require(<span style="color:#f1fa8c">&#39;craco-plugin-scoped-css&#39;</span>),
     },
   ],
 };
@@ -230,9 +230,9 @@ npm i -D craco-plugin-scoped-css
 파일명과 확장자 사이에 scoped 라고 추가 해줘야 합니다.
 </code></pre><h3 id="cssscss-scoped-연결">css/scss scoped 연결</h3>
 <p>스타일을 적용하고자 하는 컴포넌트 상단에 import 해줍니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// 파일명 폴더와 이름을 확인해서 넣어주세요.
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./scss/App.scoped.scss&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#6272a4">// 파일명 폴더와 이름을 확인해서 넣어주세요.
+</span><span style="color:#6272a4"></span>
+<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;./scss/App.scoped.scss&#39;</span>;
 </code></pre></div><hr>
 <p><strong>🚩 END&hellip;</strong></p>
 <p>이후 <code>npm start</code> 로 서버를 구동하고 개발자 모드로 소스를 확인하면
@@ -395,6 +395,19 @@ html 소스와 css 파일의 내용이 data-v-&hellip;.. 로 바인딩 되어 �
 
 
 
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', '298843240', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
