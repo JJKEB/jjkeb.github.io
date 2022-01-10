@@ -53,7 +53,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
 
     
-    
+    <link rel="stylesheet" href="https://kuma.kr/css/style.css">
 
     
     
@@ -143,7 +143,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('https://img.zhaohuabing.com/post-bg-2015.jpg')
+        background-image: url('https://user-images.githubusercontent.com/8143180/148764494-94bb5d27-abf0-485c-9a49-53e213d0f874.jpg')
     }
 </style>
 
@@ -191,7 +191,76 @@
                 post-container">
 
                 
-                
+                <blockquote>
+<p>“이글은 create react app 으로 구성된 react 개발 환경에서 style 을 scoped 로 적용하는 방법을 설명하는 글입니다. ”</p>
+</blockquote>
+<h3 id="react-app-환경구성">React App 환경구성</h3>
+<p>create-react-app 프로젝트 폴더를 생성하고 생성된 폴더로 이동합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npx create-react-app 폴더명
+
+cd 폴더명
+</code></pre></div><h3 id="추가-패키지-설치">추가 패키지 설치</h3>
+<p><a href="https://github.com/gsoft-inc/craco/blob/master/packages/craco/README.md#installation" target="_blank" rel="nofollow">craco</a>
+ 와 <a href="https://www.npmjs.com/package/craco-plugin-scoped-css" target="_blank" rel="nofollow">craco-plugin-scoped-css</a>
+ 패키지 두개를 설치합니다.</p>
+<p>※ craco 는 CRA 환경에 webpack 이나 다른 config 파일을 수정이 힘들기에.. ( <del>npm eject 해야&hellip;</del> ) eslint, babel, postcss 등의 패키지의 설정을 eject 하지않고 커스텀 할수있도록 해주는 패키지라 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i @craco/craco
+npm i -D craco-plugin-scoped-css
+</code></pre></div><h3 id="packagejson-설정">package.json 설정</h3>
+<p>루트에 있는 package.json 파일의 scripts 이부분을 craco 실행으로 변경합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+  <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;craco start&#34;</span>,
+  <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;craco build&#34;</span>,
+  <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;craco test&#34;</span>,
+  <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+}
+</code></pre></div><h3 id="cracoconfigjs-생성">craco.config.js 생성</h3>
+<p>루트에 <strong>craco.config.js</strong> 파일을 생성하고 아래 내용을 입력한후 저장합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+    {
+      <span style="color:#a6e22e">plugin</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;craco-plugin-scoped-css&#39;</span>),
+    },
+  ],
+};
+</code></pre></div><h3 id="cssscss-scoped-생성">css/scss scoped 생성</h3>
+<p>/src 폴더에 파일을 생성해 줍니다. ( .scss 혹은 .css )</p>
+<pre tabindex="0"><code>/경로/파일명.scoped.scss
+
+파일명과 확장자 사이에 scoped 라고 추가 해줘야 합니다.
+</code></pre><h3 id="cssscss-scoped-연결">css/scss scoped 연결</h3>
+<p>스타일을 적용하고자 하는 컴포넌트 상단에 import 해줍니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// 파일명 폴더와 이름을 확인해서 넣어주세요.
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./scss/App.scoped.scss&#39;</span>;
+</code></pre></div><hr>
+<p><strong>🚩 END&hellip;</strong></p>
+<p>이후 <code>npm start</code> 로 서버를 구동하고 개발자 모드로 소스를 확인하면
+html 소스와 css 파일의 내용이 data-v-&hellip;.. 로 바인딩 되어 있습니다.</p>
+<p>
+  <img src="https://user-images.githubusercontent.com/8143180/148764130-53d10c18-85e5-4794-b7ce-5e78398b7cd6.jpg" alt="0108_004">
+
+
+
+  <img src="https://user-images.githubusercontent.com/8143180/148764132-fb325f07-b7ce-4283-bec9-e4baa75716fa.jpg" alt="0110_003">
+
+</p>
+<hr>
+<p><strong>Memo</strong></p>
+<ul>
+<li>스타일 파일의 확장자 앞에 붙이는 <code>scoped</code> 및 <code>module</code> 은 단순 import 를 할때엔 컴파일된 css 와 동일하게 작동합니다.</li>
+<li><code>파일명.scoped.확장자</code> 이렇게 명명된 파일은 <code>import 변수명 from 경로</code> 로 값을 받아와도 빈 객체만 리턴됩니다.</li>
+<li>다시 <code>module</code> 로 사용하거나 <strong>styled-components</strong> 패키지를 적용 할땐 scoped → module 로 변경하고 import 하면됩니다.</li>
+</ul>
+<hr>
+<p><strong>참고 사이트</strong></p>
+<ul>
+<li><a href="https://dev.to/viclafouch/-%20how-to-scope-your-css-scss-in-react-js-271a" target="_blank" rel="nofollow">https://dev.to/viclafouch/how-to-scope-your-css-scss-in-react-js-271a</a>
+ - 원문</li>
+<li><a href="https://note.redgoose.me/article/3130/" target="_blank" rel="nofollow">https://note.redgoose.me/article/3130/</a>
+</li>
+</ul>
+
 
                 
 
