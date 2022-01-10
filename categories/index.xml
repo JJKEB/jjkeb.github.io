@@ -5,6 +5,16 @@
     <link>https://kuma.kr/categories/</link>
     <description>Recent content in Categories on KUMA Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language><atom:link href="https://kuma.kr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko</language>
+    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://kuma.kr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech</title>
+      <link>https://kuma.kr/categories/tech/</link>
+      <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
+      
+      <guid>https://kuma.kr/categories/tech/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

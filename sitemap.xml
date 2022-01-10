@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kuma.kr/categories/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+  </url><url>
     <loc>https://kuma.kr/create-react-app-scoped/</loc>
     <lastmod>2022-01-10T14:55:48+09:00</lastmod>
   </url><url>
@@ -11,8 +14,19 @@
     <loc>https://kuma.kr/post/</loc>
     <lastmod>2022-01-10T14:55:48+09:00</lastmod>
   </url><url>
-    <loc>https://kuma.kr/categories/</loc>
+    <loc>https://kuma.kr/tags/react/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+  </url><url>
+    <loc>https://kuma.kr/tags/scoped/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+  </url><url>
+    <loc>https://kuma.kr/tags/scss/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
   </url><url>
     <loc>https://kuma.kr/tags/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+  </url><url>
+    <loc>https://kuma.kr/categories/tech/</loc>
+    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
   </url>
 </urlset>
