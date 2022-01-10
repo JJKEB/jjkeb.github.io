@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>react on KUMA Blog</title>
-    <link>https://kuma.kr/tags/react/</link>
+    <link>https://blog.kuma.kr/tags/react/</link>
     <description>Recent content in react on KUMA Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://kuma.kr/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://blog.kuma.kr/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create React App 에서 Scoped 사용하기</title>
-      <link>https://kuma.kr/create-react-app-scoped/</link>
+      <link>https://blog.kuma.kr/create-react-app-scoped/</link>
       <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
       
-      <guid>https://kuma.kr/create-react-app-scoped/</guid>
+      <guid>https://blog.kuma.kr/create-react-app-scoped/</guid>
       <description>“이글은 create react app 으로 구성된 react 개발 환경에서 style 을 scoped 로 적용하는 방법을 설명하는 글입니다. ” React App 환경구성 create-react-app 프로젝트 폴더를 생성하고 생성된 폴더로 이동합니다.</description>
     </item>
     

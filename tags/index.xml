@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on KUMA Blog</title>
-    <link>https://kuma.kr/tags/</link>
+    <link>https://blog.kuma.kr/tags/</link>
     <description>Recent content in Tags on KUMA Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://kuma.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://blog.kuma.kr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react</title>
-      <link>https://kuma.kr/tags/react/</link>
+      <link>https://blog.kuma.kr/tags/react/</link>
       <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
       
-      <guid>https://kuma.kr/tags/react/</guid>
+      <guid>https://blog.kuma.kr/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scoped</title>
-      <link>https://kuma.kr/tags/scoped/</link>
+      <link>https://blog.kuma.kr/tags/scoped/</link>
       <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
       
-      <guid>https://kuma.kr/tags/scoped/</guid>
+      <guid>https://blog.kuma.kr/tags/scoped/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scss</title>
-      <link>https://kuma.kr/tags/scss/</link>
+      <link>https://blog.kuma.kr/tags/scss/</link>
       <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
       
-      <guid>https://kuma.kr/tags/scss/</guid>
+      <guid>https://blog.kuma.kr/tags/scss/</guid>
       <description></description>
     </item>
     
