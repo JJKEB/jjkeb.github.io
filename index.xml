@@ -12,19 +12,30 @@
         <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
         
         <guid>https://blog.kuma.kr/p/create-react-app-%EC%97%90%EC%84%9C-scoped-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;img src="https://user-images.githubusercontent.com/8143180/148764494-94bb5d27-abf0-485c-9a49-53e213d0f874.jpg" alt="Featured image of post Create React App 에서 Scoped 사용하기" /&gt;&lt;h3 id=&#34;react-app-환경구성&#34;&gt;React App 환경구성&lt;/h3&gt;
-&lt;p&gt;create-react-app 프로젝트 폴더를 생성하고 생성된 폴더로 이동합니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;npx create-react-app 폴더명
+        <description>&lt;img src="https://user-images.githubusercontent.com/8143180/148764494-94bb5d27-abf0-485c-9a49-53e213d0f874.jpg" alt="Featured image of post Create React App 에서 Scoped 사용하기" /&gt;&lt;p&gt;React에서 컴포넌트에 스타일을 적용하는 방법을 공부하던중에 VUE 에서는 단순히 style 태그에 scoped 만 적어주면 되는걸
+React 에서는 module 이라고 확장자도 바꿔줘야하고 각 클래스 마다 전부 조절해줘야 한다는점에 의구심이 들어
+VUE 처럼 적용할수는 없을까? .. 해서 찾아보니 방법이 있어서 해봤습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;환경구성&#34;&gt;환경구성&lt;/h2&gt;
+&lt;p&gt;node.js 설치가 완료되어 npm 명령어 사용이 가능할때
+create-react-app 프로젝트 폴더를 생성하고 생성된 폴더로 이동합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 글로벌로 설치할때&lt;/span&gt;
+npm i -g create-react-app       // 글로벌로 설치
+create-react-app .              // 설치할 폴더로 이동후 터미널에서 명령어 실행
+
+
+&lt;span class=&#34;c1&#34;&gt;# 특정 폴더에만 설치할때&lt;/span&gt;
+npx create-react-app 설치폴더명
 
 &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; 폴더명
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;추가-패키지-설치&#34;&gt;추가 패키지 설치&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;추가-패키지-설치&#34;&gt;추가 패키지 설치&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/gsoft-inc/craco/blob/master/packages/craco/README.md#installation&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34;&gt;craco&lt;/a&gt;
  와 &lt;a href=&#34;https://www.npmjs.com/package/craco-plugin-scoped-css&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34;&gt;craco-plugin-scoped-css&lt;/a&gt;
  패키지 두개를 설치합니다.&lt;/p&gt;
 &lt;p&gt;※ craco 는 CRA 환경에 webpack 이나 다른 config 파일을 수정이 힘들기에.. ( &lt;del&gt;npm eject 해야&amp;hellip;&lt;/del&gt; ) eslint, babel, postcss 등의 패키지의 설정을 eject 하지않고 커스텀 할수있도록 해주는 패키지라 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;npm i @craco/craco
 npm i -D craco-plugin-scoped-css
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;packagejson-설정&#34;&gt;package.json 설정&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packagejson-설정&#34;&gt;package.json 설정&lt;/h2&gt;
 &lt;p&gt;루트에 있는 package.json 파일의 scripts 이부분을 craco 실행으로 변경합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;craco start&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -32,7 +43,7 @@ npm i -D craco-plugin-scoped-css
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;craco test&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;eject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;react-scripts eject&amp;#34;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cracoconfigjs-생성&#34;&gt;craco.config.js 생성&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cracoconfigjs-생성&#34;&gt;craco.config.js 생성&lt;/h2&gt;
 &lt;p&gt;루트에 &lt;strong&gt;craco.config.js&lt;/strong&gt; 파일을 생성하고 아래 내용을 입력한후 저장합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span class=&#34;nx&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
@@ -41,12 +52,12 @@ npm i -D craco-plugin-scoped-css
     &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cssscss-scoped-생성&#34;&gt;css/scss scoped 생성&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cssscss-scoped-생성&#34;&gt;css/scss scoped 생성&lt;/h2&gt;
 &lt;p&gt;/src 폴더에 파일을 생성해 줍니다. ( .scss 혹은 .css )&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/경로/파일명.scoped.scss
 
 파일명과 확장자 사이에 scoped 라고 추가 해줘야 합니다.
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cssscss-scoped-연결&#34;&gt;css/scss scoped 연결&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cssscss-scoped-연결&#34;&gt;css/scss scoped 연결&lt;/h2&gt;
 &lt;p&gt;스타일을 적용하고자 하는 컴포넌트 상단에 import 해줍니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 파일명 폴더와 이름을 확인해서 넣어주세요.
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
@@ -95,10 +106,9 @@ html 소스와 css 파일의 내용이 data-v-&amp;hellip;.. 로 바인딩 되�
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://dev.to/viclafouch/how-to-scope-your-css-scss-in-react-js-271a&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34;&gt;https://dev.to/viclafouch/how-to-scope-your-css-scss-in-react-js-271a&lt;/a&gt;
  - 원문&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://note.redgoose.me/article/3130/&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34;&gt;https://note.redgoose.me/article/3130/&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://min9nim.github.io/2020/04/react-scoped-css/&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34;&gt;https://min9nim.github.io/2020/04/react-scoped-css/&lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/ul&gt;</description>
         </item>
         <item>
         <title>Git 명령어</title>
