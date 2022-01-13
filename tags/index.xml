@@ -6,11 +6,11 @@
     <description>Recent content in Tags on KUMA Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 10 Jan 2022 14:55:48 +0900</lastBuildDate><atom:link href="https://blog.kuma.kr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kuma.kr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react</title>
       <link>https://blog.kuma.kr/tags/react/</link>
-      <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://blog.kuma.kr/tags/react/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>scoped</title>
       <link>https://blog.kuma.kr/tags/scoped/</link>
-      <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://blog.kuma.kr/tags/scoped/</guid>
       <description></description>
@@ -28,9 +28,36 @@
     <item>
       <title>scss</title>
       <link>https://blog.kuma.kr/tags/scss/</link>
-      <pubDate>Mon, 10 Jan 2022 14:55:48 +0900</pubDate>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://blog.kuma.kr/tags/scss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CLI</title>
+      <link>https://blog.kuma.kr/tags/cli/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.kuma.kr/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://blog.kuma.kr/tags/git/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.kuma.kr/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://blog.kuma.kr/tags/github/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.kuma.kr/tags/github/</guid>
       <description></description>
     </item>
     

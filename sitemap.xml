@@ -3,30 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kuma.kr/categories/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.kuma.kr/create-react-app-scoped/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <loc>https://blog.kuma.kr/p/create-react-app-%EC%97%90%EC%84%9C-scoped-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/post/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/tags/react/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/tags/scoped/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/tags/scss/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/tags/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.kuma.kr/categories/tech/</loc>
-    <lastmod>2022-01-10T14:55:48+09:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/tags/cli/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/tags/git/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/tags/github/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/page/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kuma.kr/links/</loc>
+  </url><url>
+    <loc>https://blog.kuma.kr/search/</loc>
   </url>
 </urlset>

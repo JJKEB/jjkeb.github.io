@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on KUMA Blog</title>
+    <link>https://blog.kuma.kr/tags/git/</link>
+    <description>Recent content in git on KUMA Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 08 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kuma.kr/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 명령어</title>
+      <link>https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
+      <description>📌 Git 명령어 git init # git 프로젝트 초기화 git push origin main # main 브랜치를 원격 저장소 (git server) push git clone 깃_저장소_주소 # git 저장소에서 로컬로 복사 git status # 현재 add, commit, push 여부를 보여줌 git add 파일명 # 파일을 스테이지(state)에 올림 ( . 은 모든 파일 올림 ) git commit # 파일을 커밋하여 로컬 저장소에 올린다. git commit -m &amp;#34;add 3.md&amp;#34; # 에디터로 들어가지 않고 &amp;#34;간략하게 커밋 메시지 작성&amp;#34; # **------------- remote -------------** git remote # 등록된 리모트 별칭을 보여준다.</description>
+    </item>
+    
+  </channel>
+</rss>

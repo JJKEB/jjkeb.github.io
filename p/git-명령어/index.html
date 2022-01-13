@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='사용해본 Git CLI 명령어 정리'><title>Git 명령어</title>
+
+<link rel='canonical' href='https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Git 명령어'>
+<meta property='og:description' content='사용해본 Git CLI 명령어 정리'>
+<meta property='og:url' content='https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/'>
+<meta property='og:site_name' content='KUMA Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='git' /><meta property='article:tag' content='github' /><meta property='article:tag' content='CLI' /><meta property='article:published_time' content='2022-01-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-08T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Git 명령어">
+<meta name="twitter:description" content="사용해본 Git CLI 명령어 정리">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/">Git 명령어</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        사용해본 Git CLI 명령어 정리
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 08, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="-git-명령어">📌 Git 명령어</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init                           <span class="c1"># git 프로젝트 초기화</span>
+git push origin main               <span class="c1"># main 브랜치를 원격 저장소 (git server) push</span>
+git clone 깃_저장소_주소             <span class="c1"># git 저장소에서 로컬로 복사</span>
+
+git status                         <span class="c1"># 현재 add, commit, push 여부를 보여줌</span>
+
+git add 파일명                      <span class="c1"># 파일을 스테이지(state)에 올림 ( . 은 모든 파일 올림 )</span>
+
+git commit                         <span class="c1"># 파일을 커밋하여 로컬 저장소에 올린다.</span>
+git commit -m <span class="s2">&#34;add 3.md&#34;</span>           <span class="c1"># 에디터로 들어가지 않고 &#34;간략하게 커밋 메시지 작성&#34;</span>
+
+<span class="c1"># **------------- remote -------------**</span>
+git remote                         <span class="c1"># 등록된 리모트 별칭을 보여준다.</span>
+git remote -v                      <span class="c1"># 등록된 리모트 별칭 및 주소를 모두 보기 ( -a 원격저장소 브랜치가 확인됨 )</span>
+git remote add origin 깃주소        <span class="c1"># 해당 깃주소로 origin 이란 별칭의 원격저장소를 등록한다.</span>
+
+<span class="c1"># **------------- commit 취소 -------------**</span>
+git revert --no-commit HEAD~3..    <span class="c1"># 3번의 커밋 이전으로 돌아감</span>
+git reset --hard HEAD~1            <span class="c1"># 1번의 이전 커밋으로 돌아감</span>
+git reset --hard HEAD~1            <span class="c1"># 2번의 이전 커밋으로 돌아감</span>
+git reset --hard ORIG_HEAD         <span class="c1"># 이전으로 돌아갔던걸 취소한다. 1 번만 가능</span>
+
+git reset HEAD^                    <span class="c1"># 가장 최신 커밋 1개 취소(삭제)</span>
+git reset HEAD^^                   <span class="c1"># 가장 최신 커밋 2개 취소(삭제)</span>
+                                   <span class="c1"># 꺽쇠 갯수에 따라 최신 커밋을 필요한만큼 순서대로 삭제할 수 있음</span>
+
+<span class="c1"># **------------- add 취소 -------------**</span>
+git reset                          <span class="c1"># 전체 파일 add 취소)</span>
+git reset HEAD 파일                <span class="c1"># 특정 파일 add 취소)</span>
+
+<span class="c1"># **------------- branch -------------**</span>
+git branch                        <span class="c1"># 등록된 branch(브랜치) 를 보여주고 현재 위치한 브랜치명을 표시해준다.</span>
+git branch 브랜치명                <span class="c1"># 지정한 이름의 분기점(branch) 을 만든다.</span>
+
+git branch -m main                <span class="c1"># 기존 동일한 이름의 branch 가 있을경우 경고메시지가 나오고 없을경우 현재 위치한 branch 명을 바꿉니다.</span>
+git branch -M main                <span class="c1"># 동일한 이름의 branch 가 있더라도 현재 branch 명을 바꾸고 기존 존재하던 branch 를 삭제 합니다.</span>
+
+**git** checkout --  **.          <span class="c1">#** add, commit 하기 이전에 수정했던 파일들을 원래대로 돌리기</span>
+git checkout -b blue              <span class="c1"># blue 라는 이름의 브랜치를 만들면서 동시에 이동한다. (switch 명령으로는 안됨)</span>
+git switch 혹은 checkout 브랜치명   <span class="c1"># 지정한 브랜치로 스위칭한다.</span>
+
+git merge 브랜치명                 <span class="c1"># 현재 위치한 브랜치에 지정한 브랜치의 파일을 합친다.</span>
+git branch -D 브랜치명             <span class="c1"># 사용이 끝난 **브랜치 삭제**하기</span>
+
+git pull origin master            <span class="c1"># origin 이란 별칭의 원격 remote 주소의 파일을 로컬 master 브랜치로 가져온다.</span>
+git fetch upstream develop        <span class="c1"># upstream 이란 별칭의 원격 remote 주소의 파일을 로컬 develop 브랜치로 가져온다.</span>
+
+git log --oneline                 <span class="c1"># 커밋 했던 내역 간략하게 확인</span>
+
+**# git bash 명령어**
+touch server.py                   <span class="c1"># 파일 생성</span>
+ls                                <span class="c1"># 파일을 본다 ( 뒤에 -a 를 붙이면 숨김파일도 보여준다 )</span>
+vi 파일명                          <span class="c1"># vim 에디터로 파일을 연다</span>
+cat 파일명                         <span class="c1"># 파일 내용 미리보기</span>
+rm 파일명                          <span class="c1"># 파일 삭제</span>
+
+<span class="c1"># **VS CODE 실행 팁 bath** </span>
+code .                             <span class="c1"># vscode로 해당 폴더 프로젝트 열림 - vscode 터미널이라면 해당 창에 열림</span>
+code . -r                          <span class="c1"># vscode로 해당 폴더 프로젝트 새창 열림</span>
+</code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/git/">git</a>
+        
+            <a href="/tags/github/">github</a>
+        
+            <a href="/tags/cli/">CLI</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/create-react-app-%EC%97%90%EC%84%9C-scoped-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://user-images.githubusercontent.com/8143180/148764494-94bb5d27-abf0-485c-9a49-53e213d0f874.jpg" loading="lazy" data-key="" data-hash="https://user-images.githubusercontent.com/8143180/148764494-94bb5d27-abf0-485c-9a49-53e213d0f874.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Create React App 에서 Scoped 사용하기</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 KUMA Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-git-명령어">📌 Git 명령어</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
