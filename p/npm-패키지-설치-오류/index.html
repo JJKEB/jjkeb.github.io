@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='사용해본 Git CLI 명령어 정리'><title>Git 명령어</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='요약 :
+parcel-bundler 설치 중에 설치가 안되는 오류 발생 / 다른 패키지도 설치안됨
+'><title>npm 패키지 설치 오류</title>
 
-<link rel='canonical' href='https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/'>
+<link rel='canonical' href='https://blog.kuma.kr/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/'>
 
-<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Git 명령어'>
-<meta property='og:description' content='사용해본 Git CLI 명령어 정리'>
-<meta property='og:url' content='https://blog.kuma.kr/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/'>
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='npm 패키지 설치 오류'>
+<meta property='og:description' content='요약 :
+parcel-bundler 설치 중에 설치가 안되는 오류 발생 / 다른 패키지도 설치안됨
+'>
+<meta property='og:url' content='https://blog.kuma.kr/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/'>
 <meta property='og:site_name' content='KUMA Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='git' /><meta property='article:tag' content='github' /><meta property='article:tag' content='CLI' /><meta property='article:published_time' content='2022-01-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-08T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Git 명령어">
-<meta name="twitter:description" content="사용해본 Git CLI 명령어 정리">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='npm' /><meta property='article:tag' content='error' /><meta property='article:published_time' content='2022-01-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-15T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="npm 패키지 설치 오류">
+<meta name="twitter:description" content="요약 :
+parcel-bundler 설치 중에 설치가 안되는 오류 발생 / 다른 패키지도 설치안됨
+">
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ESZCNT0N0"></script>
@@ -86,13 +92,9 @@ if (!doNotTrack) {
     
 
     <h2 class="article-title">
-        <a href="/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/">Git 명령어</a>
+        <a href="/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/">npm 패키지 설치 오류</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        사용해본 Git CLI 명령어 정리
-    </h3>
     
 
     
@@ -108,7 +110,7 @@ if (!doNotTrack) {
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jan 08, 2022</time>
+                <time class="article-time--published">Jan 15, 2022</time>
             </div>
         
 
@@ -123,7 +125,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    1 minute read
                 </time>
             </div>
         
@@ -133,66 +135,27 @@ if (!doNotTrack) {
 </header>
 
     <section class="article-content">
-    <h2 id="-git-명령어">📌 Git 명령어</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init                           <span class="c1"># git 프로젝트 초기화</span>
-git push origin main               <span class="c1"># main 브랜치를 원격 저장소 (git server) push</span>
-git clone 깃_저장소_주소             <span class="c1"># git 저장소에서 로컬로 복사</span>
+    <p><strong>요약</strong> :<br>
+parcel-bundler 설치 중에 설치가 안되는 오류 발생 / 다른 패키지도 설치안됨</p>
+<hr>
+<h2 id="오류구문">오류구문</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 오류 구문</span>
+<span class="c1"># parcel-bundler 설치 중에 설치가 안되는 오류 발생</span>
 
-git status                         <span class="c1"># 현재 add, commit, push 여부를 보여줌</span>
+npm WARN deprecated parcel-bundler@1.12.5: Parcel v1 is no longer maintained. Please migrate to v2, which is published under the <span class="s1">&#39;parcel&#39;</span> package. See https://v2.parceljs.org/getting-started/migration <span class="k">for</span> details.
+npm WARN deprecated core-js@2.6.12: core-js@&lt;3.3 is no longer maintained and not recommended <span class="k">for</span> usage due to the number of issues. Because o
+of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even <span class="k">if</span> nothing is polyfilled. Please, ugpgrade your dependencies to the actual version of core-js.
+npm ERR! Unexpected end of JSON input <span class="k">while</span> parsing near <span class="s1">&#39;...de&#34;:&#34;&gt;= 10.0.0&#34;},&#34;fun&#39;</span>
 
-git add 파일명                      <span class="c1"># 파일을 스테이지(state)에 올림 ( . 은 모든 파일 올림 )</span>
+npm ERR! A <span class="nb">complete</span> log of this run can be found in:
+npm ERR!     C:<span class="se">\U</span>sers<span class="se">\j</span>jkeb<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\n</span>pm-cache<span class="se">\_</span>logs<span class="se">\2</span>022-01-06T03_10_12_360Z-debug.log
+</code></pre></div><h2 id="해결">해결</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 아래 명령어 입력으로 npm cache 를 삭제한후 정상설치 됨</span>
+<span class="c1"># npm 5 버전 이후로는 --force 를 붙여야 합니다.</span>
+npm cache clean --force     
 
-git commit                         <span class="c1"># 파일을 커밋하여 로컬 저장소에 올린다.</span>
-git commit -m <span class="s2">&#34;add 3.md&#34;</span>           <span class="c1"># 에디터로 들어가지 않고 &#34;간략하게 커밋 메시지 작성&#34;</span>
-
-<span class="c1"># **------------- remote -------------**</span>
-git remote                         <span class="c1"># 등록된 리모트 별칭을 보여준다.</span>
-git remote -v                      <span class="c1"># 등록된 리모트 별칭 및 주소를 모두 보기 ( -a 원격저장소 브랜치가 확인됨 )</span>
-git remote add origin 깃주소        <span class="c1"># 해당 깃주소로 origin 이란 별칭의 원격저장소를 등록한다.</span>
-
-<span class="c1"># **------------- commit 취소 -------------**</span>
-git revert --no-commit HEAD~3..    <span class="c1"># 3번의 커밋 이전으로 돌아감</span>
-git reset --hard HEAD~1            <span class="c1"># 1번의 이전 커밋으로 돌아감</span>
-git reset --hard HEAD~1            <span class="c1"># 2번의 이전 커밋으로 돌아감</span>
-git reset --hard ORIG_HEAD         <span class="c1"># 이전으로 돌아갔던걸 취소한다. 1 번만 가능</span>
-
-git reset HEAD^                    <span class="c1"># 가장 최신 커밋 1개 취소(삭제)</span>
-git reset HEAD^^                   <span class="c1"># 가장 최신 커밋 2개 취소(삭제)</span>
-                                   <span class="c1"># 꺽쇠 갯수에 따라 최신 커밋을 필요한만큼 순서대로 삭제할 수 있음</span>
-
-<span class="c1"># **------------- add 취소 -------------**</span>
-git reset                          <span class="c1"># 전체 파일 add 취소)</span>
-git reset HEAD 파일                <span class="c1"># 특정 파일 add 취소)</span>
-
-<span class="c1"># **------------- branch -------------**</span>
-git branch                        <span class="c1"># 등록된 branch(브랜치) 를 보여주고 현재 위치한 브랜치명을 표시해준다.</span>
-git branch 브랜치명                <span class="c1"># 지정한 이름의 분기점(branch) 을 만든다.</span>
-
-git branch -m main                <span class="c1"># 기존 동일한 이름의 branch 가 있을경우 경고메시지가 나오고 없을경우 현재 위치한 branch 명을 바꿉니다.</span>
-git branch -M main                <span class="c1"># 동일한 이름의 branch 가 있더라도 현재 branch 명을 바꾸고 기존 존재하던 branch 를 삭제 합니다.</span>
-
-**git** checkout --  **.          <span class="c1">#** add, commit 하기 이전에 수정했던 파일들을 원래대로 돌리기</span>
-git checkout -b blue              <span class="c1"># blue 라는 이름의 브랜치를 만들면서 동시에 이동한다. (switch 명령으로는 안됨)</span>
-git switch 혹은 checkout 브랜치명   <span class="c1"># 지정한 브랜치로 스위칭한다.</span>
-
-git merge 브랜치명                 <span class="c1"># 현재 위치한 브랜치에 지정한 브랜치의 파일을 합친다.</span>
-git branch -D 브랜치명             <span class="c1"># 사용이 끝난 **브랜치 삭제**하기</span>
-
-git pull origin master            <span class="c1"># origin 이란 별칭의 원격 remote 주소의 파일을 로컬 master 브랜치로 가져온다.</span>
-git fetch upstream develop        <span class="c1"># upstream 이란 별칭의 원격 remote 주소의 파일을 로컬 develop 브랜치로 가져온다.</span>
-
-git log --oneline                 <span class="c1"># 커밋 했던 내역 간략하게 확인</span>
-
-**# git bash 명령어**
-touch server.py                   <span class="c1"># 파일 생성</span>
-ls                                <span class="c1"># 파일을 본다 ( 뒤에 -a 를 붙이면 숨김파일도 보여준다 )</span>
-vi 파일명                          <span class="c1"># vim 에디터로 파일을 연다</span>
-cat 파일명                         <span class="c1"># 파일 내용 미리보기</span>
-rm 파일명                          <span class="c1"># 파일 삭제</span>
-
-<span class="c1"># **VS CODE 실행 팁 bath** </span>
-code .                             <span class="c1"># vscode로 해당 폴더 프로젝트 열림 - vscode 터미널이라면 해당 창에 열림</span>
-code . -r                          <span class="c1"># vscode로 해당 폴더 프로젝트 새창 열림</span>
+<span class="c1"># 이 명령어는 npm cache 를 확인해 가비지데이터는 삭제하고 무결성 검사 수행</span>
+npm cache verify
 </code></pre></div>
 </section>
 
@@ -201,11 +164,9 @@ code . -r                          <span class="c1"># vscode로 해당 폴더 �
     
     <section class="article-tags">
         
-            <a href="/tags/git/">git</a>
+            <a href="/tags/npm/">npm</a>
         
-            <a href="/tags/github/">github</a>
-        
-            <a href="/tags/cli/">CLI</a>
+            <a href="/tags/error/">error</a>
         
     </section>
 
@@ -239,18 +200,6 @@ code . -r                          <span class="c1"># vscode로 해당 폴더 �
                 
                     
 <article class="">
-    <a href="/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">npm 패키지 설치 오류</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/p/php-%EB%8D%B0%EC%9D%B4%ED%84%B0-javascript%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">
         
         
@@ -275,6 +224,18 @@ code . -r                          <span class="c1"># vscode로 해당 폴더 �
 
         <div class="article-details">
             <h2 class="article-title">Create React App 에서 Scoped 사용하기</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/git-%EB%AA%85%EB%A0%B9%EC%96%B4/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git 명령어</h2>
         </div>
     </a>
 </article>
@@ -402,7 +363,8 @@ code . -r                          <span class="c1"># vscode로 해당 폴더 �
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#-git-명령어">📌 Git 명령어</a></li>
+    <li><a href="#오류구문">오류구문</a></li>
+    <li><a href="#해결">해결</a></li>
   </ol>
 </nav>
                 </div>

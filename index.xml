@@ -6,12 +6,86 @@
         <description>Recent content on KUMA Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kuma.kr/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>php데이터 javascript에서 사용하기</title>
-        <link>https://blog.kuma.kr/p/php%EB%8D%B0%EC%9D%B4%ED%84%B0-javascript%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+        <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.kuma.kr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>npm 명령어</title>
+        <link>https://blog.kuma.kr/p/npm-%EB%AA%85%EB%A0%B9%EC%96%B4/</link>
+        <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.kuma.kr/p/npm-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
+        <description>&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# npm 프로젝트 시작 ( package.json 생성됨 )&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# -y 를 붙이면 init 초기화시 기본설정을 물어보지 않고 기본으로 설치된다.&lt;/span&gt;
+npm init -y                    
+
+&lt;span class=&#34;c1&#34;&gt;# 서버구동&lt;/span&gt;
+npx serve
+
+&lt;span class=&#34;c1&#34;&gt;# 개발용 의존성 (devDependencies) 으로 parcel-bundler 설치&lt;/span&gt;
+npm install parcel-bundler -D  
+
+&lt;span class=&#34;c1&#34;&gt;# 일반 의존성 (dependencies) 으로 lodash 패키지(모듈 modules) 설치&lt;/span&gt;
+npm install lodash             
+
+&lt;span class=&#34;c1&#34;&gt;# node_modules 폴더 삭제시 package.json 에 설정된 모듈 재설치&lt;/span&gt;
+npm install &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;혹은 npm i&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;   
+
+&lt;span class=&#34;c1&#34;&gt;# 기존 패키지의 다른 버전으로 설치된 버전을 덮어 씌우며 설치함   &lt;/span&gt;
+npm install lodash@4.17.20     
+
+&lt;span class=&#34;c1&#34;&gt;# 패키지를 업데이트 (단 json 파일 패키지 버전에 ^ 이 없으면 업데이트 안됨)&lt;/span&gt;
+npm update lodash              
+
+&lt;span class=&#34;c1&#34;&gt;# package.json 파일 내부 script 에 설정한 dev 라는 이름의 스크립트 명령어가 실행됨&lt;/span&gt;
+npm run dev                    
+
+&lt;span class=&#34;c1&#34;&gt;# 패키지 lodash 의 정보를 확인함&lt;/span&gt;
+npm info lodash 
+
+&lt;span class=&#34;c1&#34;&gt;# npm cache 삭제&lt;/span&gt;
+npm cache clean --force    
+
+&lt;span class=&#34;c1&#34;&gt;# npm cache 무결성 검사 및 가비지 데이터 삭제&lt;/span&gt;
+npm cache verify           
+
+&lt;span class=&#34;c1&#34;&gt;# 설치된 패키지 조회&lt;/span&gt;
+npm ls          
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>npm 패키지 설치 오류</title>
+        <link>https://blog.kuma.kr/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/</link>
+        <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.kuma.kr/p/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;요약&lt;/strong&gt; :&lt;br&gt;
+parcel-bundler 설치 중에 설치가 안되는 오류 발생 / 다른 패키지도 설치안됨&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;오류구문&#34;&gt;오류구문&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 오류 구문&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# parcel-bundler 설치 중에 설치가 안되는 오류 발생&lt;/span&gt;
+
+npm WARN deprecated parcel-bundler@1.12.5: Parcel v1 is no longer maintained. Please migrate to v2, which is published under the &lt;span class=&#34;s1&#34;&gt;&amp;#39;parcel&amp;#39;&lt;/span&gt; package. See https://v2.parceljs.org/getting-started/migration &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; details.
+npm WARN deprecated core-js@2.6.12: core-js@&amp;lt;3.3 is no longer maintained and not recommended &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; usage due to the number of issues. Because o
+of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; nothing is polyfilled. Please, ugpgrade your dependencies to the actual version of core-js.
+npm ERR! Unexpected end of JSON input &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; parsing near &lt;span class=&#34;s1&#34;&gt;&amp;#39;...de&amp;#34;:&amp;#34;&amp;gt;= 10.0.0&amp;#34;},&amp;#34;fun&amp;#39;&lt;/span&gt;
+
+npm ERR! A &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt; log of this run can be found in:
+npm ERR!     C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\j&lt;/span&gt;jkeb&lt;span class=&#34;se&#34;&gt;\A&lt;/span&gt;ppData&lt;span class=&#34;se&#34;&gt;\R&lt;/span&gt;oaming&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;pm-cache&lt;span class=&#34;se&#34;&gt;\_&lt;/span&gt;logs&lt;span class=&#34;se&#34;&gt;\2&lt;/span&gt;022-01-06T03_10_12_360Z-debug.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;해결&#34;&gt;해결&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 아래 명령어 입력으로 npm cache 를 삭제한후 정상설치 됨&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# npm 5 버전 이후로는 --force 를 붙여야 합니다.&lt;/span&gt;
+npm cache clean --force     
+
+&lt;span class=&#34;c1&#34;&gt;# 이 명령어는 npm cache 를 확인해 가비지데이터는 삭제하고 무결성 검사 수행&lt;/span&gt;
+npm cache verify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>php 데이터 javascript에서 사용하기</title>
+        <link>https://blog.kuma.kr/p/php-%EB%8D%B0%EC%9D%B4%ED%84%B0-javascript%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.kuma.kr/p/php%EB%8D%B0%EC%9D%B4%ED%84%B0-javascript%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://blog.kuma.kr/p/php-%EB%8D%B0%EC%9D%B4%ED%84%B0-javascript%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;&lt;strong&gt;요약&lt;/strong&gt; :&lt;br&gt;
 php 변수에 데이터를 담고 script 에서 javascript 변수로 옮김&lt;/p&gt;
 &lt;hr&gt;
